@@ -18,9 +18,7 @@ st.set_page_config(
 
 
 # =====================================================================
-# 1. MOTOR MATEMATICO (NUCLEO)
-# Identico al de la version Tkinter: la fisica y el metodo
-# numerico no cambian, solo cambia como se muestra en pantalla.
+# 1. Planteo las ecuaciones para la calculadora
 # =====================================================================
 
 def resolver_blasius(eta_max=8.0, N_ref=1000):
@@ -128,10 +126,8 @@ def calcular_p_vector(errores, h_vals):
 
 
 # =====================================================================
-# 2. FUNCION QUE EJECUTA TODO EL CALCULO
-# Devuelve un diccionario con todo lo necesario para mostrar
-# resultados, tablas y graficos (equivalente a "ejecutar_calculo"
-# de la version Tkinter, pero sin tocar la interfaz).
+# 2. FUNCION EJECUTAR 
+# Devuelve un diccionario con todo lo necesario para mostrar resultados
 # =====================================================================
 
 def ejecutar_calculo(U_inf, nu, x_pos, eta_max, N_nodos):
@@ -226,7 +222,7 @@ def ejecutar_calculo(U_inf, nu, x_pos, eta_max, N_nodos):
 
 
 # =====================================================================
-# 3. GRAFICOS (misma figura de 3 paneles que en Tkinter)
+# 3. GRAFICOS
 # =====================================================================
 
 def armar_figura(resultados):
@@ -291,7 +287,7 @@ def armar_figura(resultados):
 # =====================================================================
 
 st.title("Simulador Aerodinamico de Capa Limite - Diferencias Finitas")
-st.caption("Ecuacion de Blasius | Metodo de disparo con solve_bvp | Comparacion de esquemas numericos")
+st.caption("Ecuacion de Blasius | Problema de valores de contorno con solve_bvp | Comparacion de esquemas numericos")
 
 with st.sidebar:
 
